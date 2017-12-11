@@ -1,0 +1,37 @@
+body{
+	background: #ffcf40;
+}
+
+ul{
+	list-style-type: none;
+}
+
+li {
+	padding: 5px;
+	margin: 5px;
+}
+
+.uneaten {
+	background: white;
+	height: 50px;
+}
+
+.eaten{
+	background: white;
+	xheight: 20px;
+	padding: 5px;
+	margin: 3px;
+}
+
+.bord{
+	border: 1px black solid;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+.visible{
+	visibility: visible;
+}
+

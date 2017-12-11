@@ -1,0 +1,39 @@
+<div class = "container">
+	<div class = "text-center">
+		<h1>Burgers!</h1>
+		<div class = "row">
+			<div class = "col-lg-6">
+				<ul>
+					{{#each burgers}}
+						{{#unless devoured}}
+							<li>	
+								<div class = 'uneaten col-lg-8'>{{this.burger_name}}</div>
+								<div class = 'col-lg-4'><button class = 'btn btn-lg devour' id = {{this.id}}>Devour</button></div>								
+							</li>	
+						{{/unless}}
+					{{/each}}
+				</ul>
+			</div>
+			<div class = "col-lg-6">
+				<ul>
+					{{#each burgers}}
+						{{#if devoured}}
+							<div class = 'eaten col-lg-12'>{{this.burger_name}}</div>
+						{{/if}}
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		
+		<h2>Add a burger to eat!</h2>
+		<form class = "create-form">
+			<div class = "form-group">
+				<label for = "bu">Burger:</label>
+				<input type = "text" id = "bu" name = "burger_name">
+			</div>
+			<div class = "hidden" id = "error-message">Please enter a valid burger name.</div>
+
+			<button class = 'btn btn-lg btn-primary' id = "post" type = "submit">Add Burger</button>
+		</form>
+	</div>
+</div>
